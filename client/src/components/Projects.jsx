@@ -5,13 +5,14 @@ import { ProjectContext } from "../context/projectsContext";
 
 const Projects = () => {
   const { projects, setProjects } = useContext(ProjectContext);
-  // const [projects, setProjects] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const getProjects = async () => {
     setLoading(true);
-    const response = await fetch("/api/projects");
+    const response = await fetch(
+      "https://courageous-creponne-8d5703.netlify.app/.netlify/functions/allProjects"
+    );
     if (!response.ok) {
       setLoading(false);
       setError(error);
