@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="navbar bg-light mb-4 p-0">
-      <div className="container">
+    <nav className="bg-black/25 mb-10">
+      <div className="container py-3 flex justify-between">
         <Link to={"/"} className="navbar-brand">
-          <div className="d-flex">
-            <img src={logo} alt="logo" className="mr-2" />
+          <div>
             <span>ProMGMT</span>
+          </div>
+        </Link>
+        <Link>
+          <div className="flex items-start gap-x-5">
+            <Link>Login</Link>
+            <Link className="">Signup</Link>
           </div>
         </Link>
       </div>

@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "http://localhost:5000", // Replace with the URL of your Node.js backend
+      target: "http://localhost:5000",
       changeOrigin: true,
     })
   );

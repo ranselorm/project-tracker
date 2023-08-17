@@ -7,14 +7,12 @@ import Clients from "../components/Clients";
 const Home = () => {
   return (
     <>
-      <div className="d-flex gap-3 mb-4">
-        <AddClientModal />
-        <AddProjectModal />
+      <div className="flex gap-x-6 mx-10">
+        {/* <AddClientModal />
+        <AddProjectModal /> */}
       </div>
-      <hr />
       <Projects />
-      <hr />
-      <Clients />
+      {/* <Clients /> */}
     </>
   );
 };

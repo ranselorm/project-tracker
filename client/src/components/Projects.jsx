@@ -10,9 +10,7 @@ const Projects = () => {
 
   const getProjects = async () => {
     setLoading(true);
-    const response = await fetch(
-      "https://courageous-creponne-8d5703.netlify.app/.netlify/functions/allProjects"
-    );
+    const response = await fetch("/api/projects");
     if (!response.ok) {
       setLoading(false);
       setError(error);
