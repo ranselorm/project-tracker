@@ -31,10 +31,12 @@ const Projects = () => {
       {projects.length === 0 ? (
         <p>No projects yet</p>
       ) : (
-        <div className="row mt-5">
+        <div className="mt-5 flex flex-wrap gap-4 xl:pl-[50px] pl-0">
           {projects &&
             projects.map((project) => (
-              <ProjectCard key={project._id} project={project} />
+              <div className="">
+                <ProjectCard key={project._id} project={project} />
+              </div>
             ))}
         </div>
       )}
