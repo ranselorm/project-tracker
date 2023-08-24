@@ -21,7 +21,7 @@ const TopBar = () => {
             <select
               name=""
               id=""
-              className="outline-none w-[300px] border rounded-lg border-gray-100 py-1 px-4"
+              className="outline-none w-[250px] border rounded-lg border-gray-100 py-1 px-4"
             >
               <option value="">Not Started</option>
               <option value="">In Progress</option>

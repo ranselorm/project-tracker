@@ -24,7 +24,12 @@ const Projects = () => {
     getProjects();
   }, [setProjects]);
 
-  if (loading) return <section>Loading...</section>;
+  if (loading)
+    return (
+      <section>
+        <Spinner />
+      </section>
+    );
 
   return (
     <>
