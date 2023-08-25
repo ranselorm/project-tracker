@@ -57,7 +57,7 @@ const AddProjectModal = () => {
     <>
       <button
         type="button"
-        className="btn btn-primary"
+        className="bg-[#008B8B] p-2 rounded-lg text-white flex items-center"
         data-bs-toggle="modal"
         data-bs-target="#addProjectModal"
       >

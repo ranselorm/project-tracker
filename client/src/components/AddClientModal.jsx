@@ -51,7 +51,7 @@ const AddClientModal = () => {
     <>
       <button
         type="button"
-        className="btn btn-secondary"
+        className="bg-[#006A4E] p-2 rounded-lg text-white flex items-center"
         data-bs-toggle="modal"
         data-bs-target="#addClientModal"
       >
@@ -113,13 +113,21 @@ const AddClientModal = () => {
                     onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
-                <button
-                  data-bs-dismiss="modal"
-                  className="btn btn-secondary"
-                  type="submit"
-                >
-                  Submit
-                </button>
+                <div class="flex gap-x-4">
+                  <button
+                    type="button"
+                    className="border border-black px-3 rounded-md text-sm py-2 hover:bg-black hover:text-white transition-all duration-300 font-semibold"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    className="bg-[#006A4E] text-white px-3 rounded-md text-sm py-2  transition-all duration-300 font-semibold"
+                  >
+                    Add Client
+                  </button>
+                </div>
               </form>
             </div>
           </div>
