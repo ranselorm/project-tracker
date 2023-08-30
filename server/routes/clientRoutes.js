@@ -3,7 +3,6 @@ const router = express.Router();
 import {
   GetClient,
   AllClients,
-  ClientsProjects,
   AddClient,
   UpdateClient,
   DeleteClient,
@@ -14,8 +13,6 @@ router.get("/clients/:id", GetClient);
 
 //get all client
 router.get("/clients/", AllClients);
-//get all client
-router.get("/clientProjects/:id", ClientsProjects);
 
 //create a clients
 router.post("/clients", AddClient);

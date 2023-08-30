@@ -124,6 +124,7 @@ const AddClientModal = () => {
                   <button
                     type="button"
                     className="bg-[#006A4E] text-white px-3 rounded-md text-sm py-2  transition-all duration-300 font-semibold"
+                    onClick={submitHandler}
                   >
                     Add Client
                   </button>

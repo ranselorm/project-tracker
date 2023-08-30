@@ -5,6 +5,9 @@ export const GetProject = async (req, res) => {
   const { id } = req.params;
   try {
     const project = await Project.findById(id).populate("client");
+    if (!project) {
+      res.status(401).json("Project not found!");
+    }
     res.status(200).json(project);
   } catch (error) {
     res.status(401).json(error);

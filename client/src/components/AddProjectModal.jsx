@@ -141,8 +141,9 @@ const AddProjectModal = () => {
                   data-bs-dismiss="modal"
                   className="btn btn-primary"
                   type="submit"
+                  onClick={submitHandler}
                 >
-                  Submit
+                  Add Project
                 </button>
               </form>
             </div>

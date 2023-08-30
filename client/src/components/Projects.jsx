@@ -10,14 +10,19 @@ const Projects = () => {
 
   const getProjects = async () => {
     setLoading(true);
-    const response = await fetch("/api/projects");
-    if (!response.ok) {
+    try {
+      const response = await fetch("/api/projects");
+      if (!response.ok) {
+        setLoading(false);
+        setError(error);
+      }
+      const data = await response.json();
+      setProjects(data);
       setLoading(false);
-      setError(error);
+      setError(false);
+    } catch (err) {
+      setError(err);
     }
-    const data = await response.json();
-    setProjects(data);
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -28,6 +33,13 @@ const Projects = () => {
     return (
       <section>
         <Spinner />
+      </section>
+    );
+
+  if (error)
+    return (
+      <section className="flex items-center ">
+        Something went wrong. Try again!
       </section>
     );
 

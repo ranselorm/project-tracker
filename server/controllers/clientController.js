@@ -22,16 +22,7 @@ export const AllClients = async (req, res) => {
   }
 };
 
-//delete this later
-export const ClientsProjects = async (req, res) => {
-  try {
-    const clientProjects = await Project.find({ client: req.params.id });
-    console.log(clientProjects);
-    return res.status(201).json(clientProjects);
-  } catch (error) {
-    res.status(401).json(error);
-  }
-};
+
 
 //create client
 export const AddClient = async (req, res) => {
@@ -76,19 +67,6 @@ export const UpdateClient = async (req, res) => {
   }
 };
 
-//delete client
-// export const DeleteClient = async (req, res) => {
-//   const projects = await Project.find({ client: req.params.id });
-//   console.log(projects);
-//   try {
-//     // const client = await Client.findByIdAndDelete(req.params.id);
-//     // return res.status(201).json(client);
-//   } catch (error) {
-//     console.error("Error while deleting client:", error);
-//     return res.status(500).json({ error: "Internal server error" });
-//     // return res.status(401).json(error);
-//   }
-// };
 
 export const DeleteClient = async (req, res) => {
   const { id } = req.params;

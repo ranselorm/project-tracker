@@ -17,7 +17,6 @@ const DeleteProjectButton = ({ projectId }) => {
       },
     });
     if (!response.ok) {
-      console.log("Something went wrong");
       setLoading(false);
       return;
     }
@@ -41,13 +40,14 @@ const DeleteProjectButton = ({ projectId }) => {
   };
   const { setProjects, projects } = useContext(ProjectContext);
   return (
-    <div className="d-flex mt-5 ms-auto">
+    <div className="">
       <button
         onClick={() => deleteProject(projectId)}
-        className="btn btn-danger btn-sm m-2"
+        className="flex items-center py-1 px-2 bg-red-700 text-white rounded-lg"
+        disabled={loading}
       >
         <FaTrash className="icon" />
-        Delete Project
+        {loading ? "Deleting..." : "Delete"}
       </button>
     </div>
   );
