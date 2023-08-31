@@ -7,6 +7,7 @@ const Projects = () => {
   const { projects, setProjects } = useContext(ProjectContext);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  console.log("The projects", projects);
 
   const getProjects = async () => {
     setLoading(true);

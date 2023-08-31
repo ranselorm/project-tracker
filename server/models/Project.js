@@ -18,6 +18,10 @@ const ProjectSchema = new mongoose.Schema({
     ref: "Client",
     required: true,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now, // Sets the current date and time when a document is created
+  },
 });
 
 export default mongoose.model("Project", ProjectSchema);

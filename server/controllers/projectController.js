@@ -17,7 +17,8 @@ export const GetProject = async (req, res) => {
 //all projects
 export const AllProjects = async (req, res) => {
   try {
-    const projects = await Project.find().populate("client");
+    const projects = await Project.find().sort({ createdAt: -1 });
+
     return res.status(201).json(projects);
   } catch (error) {
     res.status(401).json(error);
