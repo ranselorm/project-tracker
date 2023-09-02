@@ -49,8 +49,8 @@ export const UpdateProject = async (req, res) => {
       {
         $set: {
           name: req.body.name,
-          email: req.body.email,
-          phone: req.body.phone,
+          description: req.body.description,
+          status: req.body.status,
         },
       },
       { new: true }

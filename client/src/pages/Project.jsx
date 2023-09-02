@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, json, useParams } from "react-router-dom";
 import ClientInfo from "../components/ClientInfo";
 import EditProjectForm from "../components/EditProjectForm";
+import AddProjectModal from "../components/AddProjectModal";
 import DeleteProjectButton from "../components/DeleteProjectButton";
 import { AiOutlineEdit } from "react-icons/ai";
 
@@ -54,13 +55,9 @@ const Project = () => {
             </p>
             <ClientInfo client={project.client} />
             <div className="flex justify-end gap-x-6 mt-5">
-              <button className="bg-[#116A4E] px-2 py-1 text-white transition-all duration-300 hover:bg-[#004526] flex items-center gap-x-2 rounded-lg">
-                <AiOutlineEdit /> Update
-              </button>
+              <EditProjectForm project={project} />
               <DeleteProjectButton projectId={id} />
             </div>
-            {/* <EditProjectForm project={project} />
-            <DeleteProjectButton projectId={id} /> */}
           </>
         )}
       </div>
